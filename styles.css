@@ -20,6 +20,8 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: nowrap; /* Ensure buttons stay in one line */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
 }
 
 nav ul li {
@@ -125,4 +127,64 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        justify-content: flex-start; /* Align buttons to the start */
+    }
+    
+    nav ul li a {
+        padding: 8px 15px; /* Adjust padding for smaller screens */
+        font-size: 12px; /* Adjust font size for smaller screens */
+    }
+    
+    .intro-image {
+        width: 100px;
+    }
+    
+    main {
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    form input, form textarea {
+        font-size: 14px;
+        padding: 8px;
+    }
+    
+    form button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        justify-content: flex-start; /* Align buttons to the start */
+    }
+    
+    nav ul li a {
+        font-size: 10px; /* Further reduce font size for very small screens */
+        padding: 6px 10px; /* Further reduce padding for very small screens */
+    }
+    
+    h1, h2 {
+        font-size: 24px;
+    }
+    
+    ul li {
+        font-size: 14px;
+    }
+    
+    form input, form textarea {
+        font-size: 12px;
+        padding: 6px;
+    }
+    
+    form button {
+        font-size: 12px;
+        padding: 6px;
+    }
 }
